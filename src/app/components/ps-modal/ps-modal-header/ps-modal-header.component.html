@@ -1,0 +1,14 @@
+<div class="ps-modal-header">
+    <span>{{title}}</span>
+    <div class="ps-modal-header-bar">
+        <div class="bar-button small" *ngIf="mini" (click)="minimize()">
+            –
+        </div>
+        <div class="bar-button normal" *ngIf="max" (click)="maximize()">
+            ☐
+        </div>
+        <div class="bar-button small red" (click)="close()">
+            ×
+        </div>
+    </div>
+</div>

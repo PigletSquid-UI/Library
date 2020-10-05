@@ -1,0 +1,38 @@
+$headerHeight:40px;
+$signSize:16px;
+$padding: 8px;
+.ps-modal-header{
+    height: $headerHeight;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    padding-left: $padding;
+    .ps-modal-header-bar{
+        display: flex;
+        cursor: pointer;
+        .bar-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $headerHeight;
+            width: $headerHeight;
+            &:hover{
+                background-color: #dddddd;
+            }
+        }
+        .small{
+            font-size: $signSize * 1.3;
+        }
+        .normal{
+            font-size: $signSize;
+        }
+        .red{
+            &:hover{
+                background-color: #ff0000;
+                color: #ffffff;
+            }
+        }
+    }
+}

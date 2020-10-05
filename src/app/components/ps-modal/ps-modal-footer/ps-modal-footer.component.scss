@@ -1,0 +1,10 @@
+$padding: 8px;
+.ps-modal-footer{
+    padding: $padding;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}

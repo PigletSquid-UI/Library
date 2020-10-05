@@ -1,0 +1,5 @@
+<div class="ps-modal" #modal>
+    <ps-modal-header [title]="title" [mini]="mini" [max]="max" [id]="id" (clickEvent)="click($event)"></ps-modal-header>
+    <ps-modal-content [content]="content"></ps-modal-content>
+    <ps-modal-footer *ngIf="footer" (clickEvent)="click($event)"></ps-modal-footer>
+</div>
