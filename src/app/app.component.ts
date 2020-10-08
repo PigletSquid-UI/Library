@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, ViewRef} from '@angular/core';
 import { PsModalService } from './components/ps-modal/ps-modal.service';
 import { TestComponent } from './test/test.component';
 
@@ -8,7 +8,10 @@ import { TestComponent } from './test/test.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
+
+    @ViewChild('menu')
+    menuRef:ElementRef;
 
     constructor(
         private modal: PsModalService
@@ -53,5 +56,13 @@ export class AppComponent {
                     throw new Error("The state of modal is wrong");
             }
         })
+    }
+
+    click(){
+        console.log("click");
+    }
+
+    test2(){
+        console.log(this.menuRef);
     }
 }

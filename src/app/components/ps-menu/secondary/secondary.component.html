@@ -1,0 +1,15 @@
+<div class="ps-menu-secondary">
+    <div class="ps-menu-secondary-item item" (click)="itemClick(state)" #item>
+        <img [src]="icon" alt="" *ngIf="icon != undefined">
+        {{title}}
+        <svg class="item-state" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" *ngIf="state == -1">
+            <polyline points="400 550,500 450,600 550" style="fill:none;stroke:black;stroke-width:40" />
+        </svg>
+        <svg class="item-state" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" *ngIf="state == 1">
+            <polyline points="400 450,500 550,600 450" style="fill:none;stroke:black;stroke-width:40" />
+        </svg>
+    </div>
+    <div [hidden]="ifHidden" #children *ngIf="hasChild">
+        <ng-content select="mt"></ng-content>
+    </div>
+</div>
