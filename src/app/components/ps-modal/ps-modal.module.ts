@@ -6,15 +6,17 @@ import { PsModalFooterComponent } from './ps-modal-footer/ps-modal-footer.compon
 import { PsModalContentComponent } from './ps-modal-content/ps-modal-content.component';
 
 import { PsButtonModule } from '../ps-button/ps-button.module';
-
-
+import { PsModalSidebarRowComponent } from './ps-modal-sidebar/ps-modal-sidebar-row/ps-modal-sidebar-row.component';
+import { PsModalSidebarColumnComponent } from './ps-modal-sidebar/ps-modal-sidebar-column/ps-modal-sidebar-column.component';
 
 @NgModule({
     declarations: [
         PsModalComponent,
         PsModalHeaderComponent,
         PsModalFooterComponent,
-        PsModalContentComponent
+        PsModalContentComponent,
+        PsModalSidebarRowComponent,
+        PsModalSidebarColumnComponent,
     ],
     imports: [
         CommonModule,

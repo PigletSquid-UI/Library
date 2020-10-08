@@ -17,13 +17,19 @@ export class AppComponent {
     }
     title = 'PigletSquid';
 
+    rotationSource = ['assets/1.jpg','assets/2.jpg','assets/3.jpg','assets/4.jpg','assets/5.jpg']
+
     buttonClick() {
+        this.modal.initSidebarContainer({
+            top:"0",
+            left:"0"
+        },"row")
         this.modal.create({
-            title: "测试标题",
+            title: "测试标题啊啊啊啊啊啊",
             content: TestComponent,
             //footer:false,
             //max:false
-        }).subscribe(res => {
+        },false).subscribe(res => {
             switch(res){
                 case "close":
                     console.log("close");
@@ -39,6 +45,9 @@ export class AppComponent {
                     break;
                 case "cancel":
                     console.log("cancel");
+                    break;
+                case "recover":
+                    console.log("recover");
                     break;
                 default:
                     throw new Error("The state of modal is wrong");

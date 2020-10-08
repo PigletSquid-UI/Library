@@ -1,0 +1,5 @@
+<div class="ps-modal-sidebar-row">
+    <div class="mini-modal" *ngFor="let modal of modalList;let i = index;" (click)="recoverModal(modal.id,index)" [title]="modal.title">
+        {{modal.title}}
+    </div>
+</div>

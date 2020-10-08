@@ -12,7 +12,7 @@ export class PsModalComponent implements OnInit,AfterViewInit {
     @Input() content: any;
     @Input() width: string = '400px';
     @Input() mini: boolean = true;
-    @Input() max: boolean = true;
+    @Input() max: boolean = false;
     @Input() drag: boolean = false;
     @Input() footer: boolean = true;
 
@@ -70,6 +70,8 @@ export class PsModalComponent implements OnInit,AfterViewInit {
     }
 
     maximize(id:string){
+        this.renderer.setStyle(this.modal,"width","100%");
+        this.renderer.setStyle(this.modal,"height","100%");
         this.modalService.maximize(id);
     }
 
@@ -80,7 +82,5 @@ export class PsModalComponent implements OnInit,AfterViewInit {
     cancel(id:string){
         this.modalService.cancel(id);
     }
-
-
 
 }

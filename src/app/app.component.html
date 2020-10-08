@@ -1,17 +1,14 @@
 
 
 <div style="height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;">
-    <div>
-    <button title="1111">1111</button>
-    <ps-input ></ps-input>
     <ps-button buttonKind="basic" buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
     <ps-button buttonKind="simple" buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
     <ps-button buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
     <ps-button buttonKind="danger" buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
     <ps-button buttonKind="success" buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
     <ps-button buttonKind="warning" buttonText="测试" (buttonClick)="buttonClick()"></ps-button>
-    <ps-calendar></ps-calendar>
-</div>
-<div class="class2">
-    1111
+    <div style="height: 300px;width: 500px;">
+        <ps-rotation [source]="rotationSource"></ps-rotation>
+    </div>
+
 </div>

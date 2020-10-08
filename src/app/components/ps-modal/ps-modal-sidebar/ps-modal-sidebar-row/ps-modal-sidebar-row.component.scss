@@ -1,0 +1,22 @@
+$modalWidth: 120px;
+$modalHeight: 40px;
+$padding:12px;
+$backgroundColor: #d3d3d3;
+.ps-modal-sidebar-row{
+    display: flex;
+    .mini-modal{
+        box-sizing: border-box;
+        height: $modalHeight;
+        width: $modalWidth;
+        line-height: $modalHeight;
+        padding: 0 $padding;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: rgba(#d3d3d3,0.5);
+        &:hover{
+            background-color: rgba(#d3d3d3,0.7)
+        }
+    }
+}

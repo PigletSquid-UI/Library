@@ -1,0 +1,51 @@
+$buttonWidth:40px;
+$buttonHeight:40px;
+$buttonBackgroundColor:#eeeeee;
+$buttonHoverBackgroundColor:#dddddd;
+.ps-rotation{
+    height: 100%;
+    width: 100%;
+    border:1px solid black;
+    box-sizing: border-box;
+    position: relative;
+        .bottom{
+            position: absolute;
+            bottom:0;
+            right: 60px;
+        }
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+    .button{
+        width: $buttonWidth;
+        height: $buttonHeight;
+        background-color: $buttonBackgroundColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select:none;
+        & svg{
+            height: 80%;
+            width: 80%;
+        }
+        &:hover{
+            background-color:$buttonHoverBackgroundColor;
+        }
+    }
+    .left{
+        position: absolute;
+        left:0;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .right{
+        position: absolute;
+        right:0;
+        top:50%;
+        transform: translateY(-50%);
+    }
+}
